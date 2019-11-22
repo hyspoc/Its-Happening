@@ -1,0 +1,46 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/*
+    Created on : Oct 12, 2018, 9:12:41 PM
+    Author     : Huang
+*/
+.global-header {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    /* padding-right: 35%; */
+    overflow: hidden;
+    background-color: #333333;
+    width: 100%;
+/*    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;*/
+    font-family: Roboto;
+    font-size: 14px;
+    line-height: 1.42857143;
+}
+
+.global-header-list {
+    float: right;
+    margin-right: 5%;
+}
+.global-header-list-left {
+    float: left;
+    margin-right: 10%;
+    margin-left: 5%;
+}
+
+.global-header-list a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+
+.global-header-list a:hover {
+    background-color: #111111;
+    text-decoration: none;
+    color: white;
+}

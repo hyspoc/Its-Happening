@@ -1,0 +1,409 @@
+/* this is for individual event page
+for event creation please create another css file */
+
+/*
+    colors:
+    Music: #0003c4, #1f50c4
+    Arts: #f71313, #ff7777,
+    Party: #6016e0, #845bcc
+    Sports: #67ff1c, #95ff60
+    Food: #fffb1e, #fffc72
+    Business: #14fff3, #77fff8
+*/
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+* {
+  box-sizing: border-box;
+}
+body {
+    font-family: Roboto,sans-serif;
+    background-color: #f2f2f2;
+}
+
+/* .banner-map-container {
+    height: 400px;
+    margin-top:1%;
+} */
+
+#banner-container {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background-color: black
+}
+
+#banner-container img {
+    position: absolute;
+    max-height: 400px;
+    max-width: 100%;
+    margin: auto;
+}
+
+#map {
+    position: relative;
+    height: 200px;
+    width: 98%;
+    margin: auto;
+    background-color: grey;
+}
+
+.event-info-container {
+    position: relative;
+    width: 80%;
+    margin: 30px auto;
+    background-color: white;
+    border-radius: 6px;
+}
+
+.event-info {
+    position: relative;
+    text-align: left;
+    margin: 1% 3% 0 3%;
+}
+
+.bookTickets-btn {
+    position: absolute;
+    margin-right: 20px;
+    margin-top: 50px;
+    right: 0;
+    width: 150px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 4px;
+    text-align: center;
+    color: white;
+    background-color: #1a75ff;
+    cursor: pointer;
+}
+
+.checkout-btn {
+    position: relative;
+    width: 150px;
+    margin: auto;
+    width: 150px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 4px;
+    text-align: center;
+    color: white;
+    background-color: #1a75ff;
+    cursor: pointer;
+}
+
+.fa {
+    width: 20px;
+    height: 20px;
+    border-radius: 20%;
+    margin-right: 5px;
+    line-height: 20px;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7) !important;
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup-container {
+    margin: 5% auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 3px;
+    width: 50%;
+    position: relative;
+    transition: all 5s ease-in-out;
+    max-height: 90%;
+}
+
+.ticket-table {
+    position: relative;
+    font-size: 80%;
+}
+
+.ticket-table th {
+    background-color: #999999;
+    text-align: center;
+    border-radius: 0;
+}
+
+.ticket-table td {
+    background-color: #cccccc;
+    text-align: center;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 0;
+}
+
+.ticket-quantity {
+    font-size: 140%;
+    line-height: 8px;
+    overflow: hidden;
+}
+
+.ticket-quantity-setter {
+    font-size: 300%;
+    padding-top: auto;
+    padding-bottom: auto;
+    line-height: 8px;
+    cursor: pointer;
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.ticket-quantity-setter-left {
+    float: left;
+    padding-left: 10px;
+}
+
+.ticket-quantity-setter-right {
+    float: right;
+    padding-right: 10px;
+}
+
+.coupon-container {
+    position: relative;
+    text-align: right;
+    margin-top: 3px;
+}
+
+#coupon {
+    width: 100px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 0px;
+    height: 30px;
+    text-align: center;
+}
+/*
+input[type="text"]#coupon::-webkit-input-placeholder {
+   text-align: right;
+}
+input[type="text"]#coupon::-ms-input-placeholder {
+   text-align: right;
+}
+input[type="text"]#coupon:-ms-input-placeholder {
+   text-align: right;
+}
+input[type="text"]#coupon:-moz-input-placeholder {
+   text-align: right;
+} */
+
+.price-container {
+    position: relative;
+    text-align: right;
+    line-height: 15px;
+}
+
+.price-container p {
+    padding-right: 10px;
+}
+
+.checkoutPopup-container {
+
+}
+
+.checkoutPopup-container h5 {
+    text-align: center;
+}
+
+.checkoutPopup-container p {
+    text-align: right;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.popup-title {
+    text-align: center;
+}
+
+.popup-line {
+    border-top: 1px solid #e6e6e6;
+    width: 90%;
+    margin: auto;
+}
+
+.popup-close {
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+
+.popup-back {
+    position: absolute;
+    top: 10px;
+    left: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+
+.popup-container .checkoutPopup-close:hover {
+  color: #06D85F;
+}
+
+.popup-container .checkoutPopup-container #checkoutPopup-content {
+  max-height: 40%;
+  overflow: scroll;
+}
+
+@media screen and (max-width: 700px){
+  .checkoutPopup-container{
+    width: 70%;
+  }
+}
+
+.guestPopup-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.guest-btn {
+    width: 150px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 4px;
+    text-align: center;
+    color: white;
+    background-color: #1a75ff;
+    cursor: pointer;
+    margin: auto;
+}
+
+#guestEmail {
+    border: 1px solid #cccccc;
+    width: 200px;
+    height: 30px;
+    margin-right: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.paypal-button-container {
+    width:250px;
+    margin:auto;
+}
+
+
+
+
+/*//Event You may like css*/
+
+.card {
+  float: left;
+  padding: 0 1.7rem;
+  width: 20%;
+  left: 3%;
+}
+
+.card .wrapper {
+  background-color: #fff;
+  min-height: 300px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.2);
+}
+.card .wrapper:hover .data {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+.card .data {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  -webkit-transform: translateY(calc(70px + 1em));
+          transform: translateY(calc(70px + 1em));
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+.card .data .content {
+  padding: 1em;
+  position: relative;
+}
+.card .author {
+  font-size: 20px;
+}
+.card .title {
+  margin-top: 10px;
+}
+.card .text {
+  height: 50px;
+  margin: 0;
+}
+
+h5 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+}
+
+.related-events-container{
+    left:20%;
+}
+
+.related_events img{
+    width: 100%;
+    height: 200px;
+    margin-bottom: 3px;
+}
+.related_events .date {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #77d7b9;
+  color: #fff;
+  padding: 0.8em;
+}
+.related_events .date span {
+  display: block;
+  text-align: center;
+}
+.related_events .date .day {
+  font-weight: 700;
+  font-size: 24px;
+  text-shadow: 2px 3px 2px rgba(0, 0, 0, 0.18);
+}
+.related_events .date .month {
+  text-transform: uppercase;
+}
+.related_events .date .month,
+.related_events .date .year {
+  font-size: 12px;
+}
+.related_events .content {
+  background-color: #fff;
+  box-shadow: 0 5px 30px 10px rgba(0, 0, 0, 0.3);
+}
+.related_events .title a {
+  color: gray;
+}
+
+.viewed {
+    position: absolute;
+    margin-right: 20px;
+    margin-top: 20px;
+    right: 0;
+    height: 40px;
+    width: 150px;
+    text-align: center;
+    color: grey;
+}

@@ -1,0 +1,338 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/*
+    Created on : Nov 29, 2018, 3:43:48 PM
+    Author     : arpit Bhatnagar
+*/
+
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+   background-color: #00ccff;
+   background-image: radial-gradient(circle, #ffffff 6%, #acd9e2 70%, #ffffff 100%);
+  color: #404041;
+  background-size: cover;
+  font-family: Roboto,sans-serif;
+  text-align: center;
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family:Roboto;
+}
+
+p {
+  font-size: 1.75rem;
+}
+
+#Profile {
+  margin: 0 auto;
+  background: white;
+  background-color: #f2f2f2;
+  max-width: 100%;
+}
+
+.profile-image {
+    float: left;
+    height: 170px; 
+}
+
+.profile-image h6 {
+    padding-left: 15%;
+}
+
+#name h3 {
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.profileNav{
+    float:right;
+    margin-right: 18%;
+    margin-left: 6%;
+}
+
+.text-overlay {
+    position: absolute;
+    margin-top: -45px;
+    margin-left: -90px;
+    z-index: 10;
+    visibility: hidden;
+    width: 180px;
+    /* background-color: #1E7A71; */
+    cursor: pointer;
+    font-size: 25px;
+    line-height: 46px;
+}
+
+#password-nav-icon:hover {
+    visibility: hidden;
+}
+#password-nav-icon:hover #password-nav-text {
+    visibility: visible;
+}
+#profile-nav-icon:hover {
+    visibility: hidden;
+}
+#profile-nav-icon:hover #profile-nav-text {
+    visibility: visible;
+}
+#tickets-nav-icon:hover {
+    visibility: hidden;
+}
+#tickets-nav-icon:hover #tickets-nav-text {
+    visibility: visible;
+}
+
+#user {
+  padding: 2.5rem;
+  display: grid;
+}
+.profileTabs{
+    float: right;
+    margin-right: 18%;
+    margin-left: 7%;
+}
+#img {
+  width: 120px;
+  height: 120px;
+  background: #DA609B url("https://s3.amazonaws.com/uifaces/faces/twitter/pixeliris/128.jpg") top center no-repeat;
+  display: block;
+  margin: 4rem auto 0;
+  border-radius: 50%;
+}
+/*#profile {
+  width: 120px;
+  height: 120px;
+  display: block;
+  margin: 4rem auto 0;
+  border-radius: 50%;
+}*/
+
+#social a {
+  margin: 0 0.5rem;
+}
+
+i[class*="2x"] {
+  color: #DA609B;
+}
+
+i[class*="1x"] {
+  transition: color 0.5s ease;
+  color: white;
+}
+i[class*="1x"]:hover {
+  color: #F1E0CD;
+}
+
+#navigation ul {
+  background: #1E7A71;
+  overflow: hidden;
+
+}
+#navigation ul i {
+  color: #f2e6d9;;
+}
+#navigation ul li.active i {
+  color: #DA609B;
+
+}
+#navigation ul li.active:hover i {
+  color: white;
+}
+
+.nav-tabs {
+  border: none;
+
+}
+
+.tab-pane {
+  padding: 10px 10% 4%;
+  display: none;
+}
+
+.tab-pane:target {
+  display: block;
+}
+
+.nav-tabs.nav-justified > li > a {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+}
+
+.nav-tabs.nav-justified > li > a:hover {
+  /* background: #D88BAC; */
+}
+
+.progress-bar {
+  background-color: #00ccff;
+}
+
+label, input {
+  margin-bottom: 1.25rem;
+}
+
+label {
+  font-size: 1.75rem;
+  color: #DA609B;
+}
+label small {
+  color: #D88BAC;
+  font-size: 1.25rem;
+  margin-left: 0.25rem;
+}
+
+.form-control:focus {
+  border-color: #D88BAC;
+  box-shadow: 0 0 0.5rem #D88BAC;
+}
+
+button[type="submit"] {
+  margin-top: 2rem;
+  background: #1E7A71;
+  border-color: #1E7A71;
+  color: white;
+  transition: color 0.5s ease;
+}
+button[type="submit"]:hover {
+  background: #1E7A71;
+  border-color: #1E7A71;
+  color: #F1E0CD;
+}
+
+#upcoming-events {
+    width: 50%;
+    float: left;
+}
+
+#past-events {
+    width: 50%;
+    float: right;
+}
+
+.ticket-label {
+    cursor: pointer;
+    /* text-decoration: underline; */
+    text-align: center;
+    font-size: 30px;
+    margin: 0;
+    /* color: #404040; */
+}
+
+.ticket {
+    /* position: relative; */
+    width: 100%;
+    height: 200px;
+    margin: 15 auto;
+    background-color: white;
+    overflow: hidden;
+    box-shadow: 2px 2px 1px 1px rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+}
+
+.ticket h4, p {
+    /* padding-left: 5px; */
+    font-size: 100%;
+    text-align: left;
+}
+
+.ticket-image-container {
+    float: left;
+    height: 200px;
+    width: 200px;
+    margin-right: 1%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.ticket-image-container img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.ticket-btn {
+    border:solid black 1px;
+    height:30px;
+    width: 150px;
+    line-height:30px;
+    cursor:pointer;
+    margin: auto;
+    float: bottom;
+}
+
+.fa {
+    color: grey;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7) !important;
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup-container {
+  margin: 5% auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 350px;
+  position: relative;
+  transition: all 5s ease-in-out;
+  /* max-height: 90%; */
+}
+
+.popup-container p {
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+}
+
+.popup-line {
+    border-top: 1px solid #e6e6e6;
+    width: 90%;
+    margin: auto;
+}
+
+.popup-container .popup-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+
+.popup-container .popup-close:hover {
+  color: #06D85F;
+}
+.popup-container #popup-content {
+  max-height: 40%;
+  overflow: scroll;
+}
+
+@media screen and (max-width: 700px){
+  .popup-container{
+    width: 70%;
+  }
+}

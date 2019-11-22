@@ -1,0 +1,73 @@
+
+
+body {
+    font-family: Roboto,sans-serif;
+    background-color: #f2f2f2;
+}
+
+.selected {
+    padding-left: 4%;
+}
+
+.category {
+    position: relative;
+    width: 618px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.searchResult {
+    position: absolute;
+    margin-top: 20px;
+    width: 60%;
+}
+
+.right-side-container {
+    position: absolute;
+    margin-top: 20px;
+    left: 65%;
+    width: 30%;
+}
+
+.card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 3px 3px 8px 0 rgba(0,0,0,0.5);
+    transition: 0.3s;
+    height: 5%;
+    right:10%;
+    background: whitesmoke;
+    display: flex;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+#map {
+    position: relative;
+    height: 400px;
+    border-radius: 8px;
+}
+
+.ad-container {
+    position: relative;
+    top: 40px;
+}
+
+.ad-container img{
+    width: 100%;
+}
+
+#adplaceholder {
+    position: absolute;
+    width: 30%;  /* The width is the width of the web page */
+    left: 65%;
+    top: 1000px;
+}
+
+.chip {
+    width: 80px;
+    text-align: center;
+}

@@ -1,0 +1,9 @@
+html {
+  height: 100%;
+}
+
+body {
+    min-height: 100%;
+    /* background-color: #00ccff; */
+    /* background-image: radial-gradient(circle, #00ccff 6%, #acd9e2 70%, #ffffff 100%); */
+}

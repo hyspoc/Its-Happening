@@ -1,0 +1,38 @@
+
+* {margin: 0; padding: 0;}
+
+.eventList {
+  margin: 20px;
+}
+
+.ulist {
+  list-style-type: none;
+  width: auto;
+}
+
+.eventTitle {
+  font: bold 20px/1.5 Roboto medium;
+}
+
+.listitem .listimg {
+  float: left;
+  margin: 0 15px 0 0;
+}
+.listimg {
+    height: 50px;
+    width: 50px;
+}
+
+.listitem .eventdesc {
+  font: 200 15px/1.2 Roboto medium;
+}
+
+.listitem {
+  padding: 10px;
+  overflow: auto;
+}
+
+.listitem:hover {
+  background: #eee;
+  cursor: pointer;
+}

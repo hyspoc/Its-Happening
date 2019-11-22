@@ -1,0 +1,256 @@
+/* this is for individual event page
+for event creation please create another css file */
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+/* * {
+  box-sizing: border-box;
+} */
+body {
+    font-family: Roboto,sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7) !important;
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup-container {
+    margin: 5% auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 3px;
+    width: 30%;
+    position: relative;
+    transition: all 5s ease-in-out;
+    max-height: 90%;
+}
+
+.price-container {
+    position: relative;
+    text-align: right;
+    line-height: 15px;
+}
+
+.price-container p {
+    padding-right: 10px;
+}
+
+.checkoutPopup-container {
+
+}
+
+.checkoutPopup-container h5 {
+    text-align: center;
+}
+
+.checkoutPopup-container p {
+    text-align: right;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.popup-title {
+    text-align: center;
+}
+
+.popup-line {
+    border-top: 1px solid #e6e6e6;
+    width: 90%;
+    margin: auto;
+}
+
+.popup-close {
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+
+.popup-back {
+    position: absolute;
+    top: 10px;
+    left: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+
+.popup-container .checkoutPopup-close:hover {
+  color: #06D85F;
+}
+
+.popup-container .checkoutPopup-container #checkoutPopup-content {
+  max-height: 40%;
+  overflow: scroll;
+}
+
+@media screen and (max-width: 700px){
+  .checkoutPopup-container{
+    width: 70%;
+  }
+}
+
+.guestPopup-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.guest-btn {
+    width: 150px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 4px;
+    text-align: center;
+    color: white;
+    background-color: #1a75ff;
+    cursor: pointer;
+    margin: auto;
+}
+
+#guestEmail {
+    border: 1px solid #cccccc;
+    width: 200px;
+    height: 30px;
+    margin-right: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.paypal-button-container {
+    width:250px;
+    margin:auto;
+}
+
+h5 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+}
+
+
+.eventForm{
+    align-content: center;
+    border: 1em;
+    align-self: center;
+}
+.form-style-5{
+	max-width: 500px;
+	padding: 10px 20px;
+	background: #f4f7f8;
+	margin: 10px auto;
+	padding: 20px;
+	background: #f4f7f8;
+	border-radius: 8px;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+.form-style-5 fieldset{
+	border: none;
+}
+.form-style-5 legend {
+	font-size: 1.4em;
+	margin-bottom: 10px;
+}
+.form-style-5 label {
+	display: block;
+	margin-bottom: 8px;
+}
+.form-style-5 input[type="text"],
+.form-style-5 input[type="date"],
+.form-style-5 input[type="datetime"],
+.form-style-5 input[type="email"],
+.form-style-5 input[type="number"],
+.form-style-5 input[type="search"],
+.form-style-5 input[type="time"],
+.form-style-5 input[type="url"],
+.form-style-5 textarea,
+.form-style-5 select {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	background: rgba(255,255,255,.1);
+	border: none;
+	border-radius: 4px;
+	font-size: 16px;
+	margin: 0;
+	outline: 0;
+	padding: 7px;
+	width: 100%;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	background-color: #e8eeef;
+	color:#8a97a0;
+	-webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+	box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+	margin-bottom: 30px;
+
+}
+.form-style-5 input[type="text"]:focus,
+.form-style-5 input[type="date"]:focus,
+.form-style-5 input[type="datetime"]:focus,
+.form-style-5 input[type="email"]:focus,
+.form-style-5 input[type="number"]:focus,
+.form-style-5 input[type="search"]:focus,
+.form-style-5 input[type="time"]:focus,
+.form-style-5 input[type="url"]:focus,
+.form-style-5 textarea:focus,
+.form-style-5 select:focus{
+	background: #d2d9dd;
+}
+.form-style-5 select{
+	-webkit-appearance: menulist-button;
+	height:35px;
+}
+.form-style-5 .number {
+	background: #1abc9c;
+	color: #fff;
+	height: 30px;
+	width: 30px;
+	display: inline-block;
+	font-size: 0.8em;
+	margin-right: 4px;
+	line-height: 30px;
+	text-align: center;
+	text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+	border-radius: 15px 15px 15px 0px;
+}
+
+.form-style-5 input[type="submit"],
+.form-style-5 input[type="button"]
+{
+	position: relative;
+	display: block;
+	padding: 19px 39px 18px 39px;
+	color: #FFF;
+	margin: 0 auto;
+	background: #1abc9c;
+	font-size: 18px;
+	text-align: center;
+	font-style: normal;
+	width: 100%;
+	border: 1px solid #16a085;
+	border-width: 1px 1px 3px;
+	margin-bottom: 10px;
+}
+.form-style-5 input[type="submit"]:hover,
+.form-style-5 input[type="button"]:hover
+{
+	background: #109177;
+}

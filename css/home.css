@@ -1,0 +1,266 @@
+html {
+  height: 100%;
+}
+
+body {
+    max-width: 100%;
+    max-height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+/*    background: whitesmoke; */
+    background-color: #00ccff;
+    background-image: radial-gradient(circle, #ffffff 6%, #acd9e2 70%, #ffffff 100%);
+}
+
+#banner-container {
+ position: relative;
+ width: 100%;
+ overflow: hidden;
+ margin: 0px auto;
+ height: 400px;
+ background: black;
+/*background: #333333;*/
+ z-index: 3;
+}
+
+/* title for upcoming event & categories */
+.titlerow {
+    margin-top: 20px;
+    font-size: 200%;
+    font-family: Roboto;
+    font-weight: bold;
+    
+    position: relative;
+    color: black;
+    
+}
+.titlerow2 {
+    margin-top: 20px;
+    font-size: 25px;
+    font-family: Roboto;
+    font-weight: bold;
+    position: relative;
+    color: black;
+    
+}
+
+/* column for upcoming event & categories */
+.column {
+  float: left;
+  width: 29%;
+  margin: 2%;
+  padding: 0 15px;
+  margin-top: 0;
+}
+
+/* Remove extra left and right margins, due to padding */
+.upcoming-events-row {
+    margin-top: 10px;
+    left: 1%;
+    right: 3%;
+    position: relative;
+}
+
+/* Clear floats after the columns */
+.upcoming-eventsrow:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Scroll bar styling */
+.sm_dashboard{
+  max-width:99%;
+  min-width:250px;
+}
+
+.sm_shelf_renderer{
+    display: block;
+    position: relative;
+}
+
+.sm_card{
+  width:250px;
+  display: inline-block;
+  vertical-align: top;
+  white-space: normal;
+  height: 400px;
+  padding: 0 2 0 2;
+  border-radius: 5px;
+  box-shadow: 0 4px 5px 5px rgba(0,0,0,0.2);
+}
+
+.sm_card:hover{
+    border-radius: 5px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.sm_horizontal_list_renderer .card {
+    background-color: transparent;
+    border-radius: 5px;
+}
+
+.sm_horizontal_list_renderer .card .card-image {
+    border-radius: 5px 5px 0 0;
+    background-color: black;
+    min-height: 165px;
+}
+
+.sm_horizontal_list_renderer .card .card-image img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.sm_horizontal_list_renderer .card .card-content {
+    background-color: white;
+    height: 235px;
+    border-radius: 0 0 5px 5px;
+}
+
+/*.sm_horizontal_list_renderer .card:hover .card-title {
+    font-size: 30px;
+}*/
+
+#sm_scroll_container.sm_horizontal_list_renderer {
+    overflow-x: hidden;
+    border-radius: 5px;
+}
+
+#items.sm_horizontal_list_renderer {
+    transition-duration: 0.1s;
+    transition-timing-function: cubic-bezier(0.4, 0.0, 1, 1);
+    will-change: transform;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+#sm_left_arrow{
+    position: absolute;
+    top: 150px;
+    right: 98%;
+    z-index:1;
+}
+#sm_right_arrow{
+    position: absolute;
+    top: 150px;
+    left: 98%;
+    z-index:1;
+}
+
+/* category */
+
+.categoryrow{
+    margin-left: 6%;
+    position: relative;
+}
+
+.category {
+    text-align : center;
+    margin-top: 15px;
+    width: 57.5%;
+    height: 15vw;
+}
+
+.category:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    font-size: 130%;
+    border-radius: 6px;
+}
+
+.category p {
+  color:#262626;
+  font-size:130%;
+  font-family:"Roboto";
+}
+
+.category img {
+  height:100%;
+  width: 100%;
+  border-radius: 6px;
+  box-shadow: 0 4px 5px 5px rgba(0,0,0,0.2);
+  margin-bottom: 2px;
+}
+
+
+
+/* about us */
+.aboutUs{
+    position: relative;
+    top: 40px;
+    width: 100%;
+    display: flex;
+    overflow: auto;
+    background: black;
+}
+
+.aboutUs-logo {
+    position: absolute;
+}
+
+.aboutUs-Container{
+    position: relative;
+    color: whitesmoke;
+    text-align: center;
+    left: 45%;
+    margin-top: auto;
+    margin-bottom: 10px;
+}
+/* about us social buttons */
+.aboutUs-Container p {
+  font-family: "Roboto";
+}
+
+.aboutUs-Container ul {
+    font-family: "Roboto";
+}
+
+.social-lsicon {
+    text-align: center;
+}
+
+.social-lsicon a {
+    font-size: 1em;
+    color: blue;
+    margin: 0 .5em;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    z-index: 99;
+    -webkit-transition: .5s all;
+    -moz-transition: .5s all;
+    -o-transition: .5s all;
+    -ms-transition: .5s all;
+    transition: .5s all;
+    /*border: 1px solid rgba(255, 255, 255, 0.21);
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-o-border-radius: 50%;
+	-ms-border-radius: 50%;*/
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    line-height: 2.4em;
+}
+.social-lsicon a:hover {
+    color: black;
+	border-color: black;
+	-webkit-transform: scale(1.2);
+	-moz-transform: scale(1.2);
+	-o-transform: scale(1.2);
+	-ms-transform: scale(1.2);
+    transform: scale(1.2);
+}
+.social-lsicon a {
+    font-size: 0.9em;
+    width: 28px;
+    height: 25px;
+    line-height: 3.1em;
+}
+
+.eventCategories {
+/*    background: pink;*/
+    z-index: 0;
+    display: flex;
+    
+}
